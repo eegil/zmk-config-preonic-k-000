@@ -8,7 +8,10 @@
       "layout": [
         { "label":       "ANY", "row": 0, "col":  9, "x":     9, "y":   0.00 },
         { "label":       "FUN", "row": 0, "col": 10, "x":    10, "y":   0.00 },
+<<<<<<< HEAD:config/_info.json
         { "label":   "encoder", "row": 0, "col": 11, "x":    11, "y":   0.00 },
+=======
+>>>>>>> 0423ada66ed475966776ce6535f4f57f70386645:config/info.json
 
         { "label":        "//", "row": 1, "col":  0, "x":     0, "y":   1.00 },
         { "label":         "1", "row": 1, "col":  1, "x":     1, "y":   1.00 },
