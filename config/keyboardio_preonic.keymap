@@ -74,6 +74,8 @@
 &trans  &trans  &trans  &trans  &kp D   &kp V   &kp K   &kp H   &trans  &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
             >;
+
+            label = "cmkdh";
         };
 
         CMK {
@@ -85,6 +87,8 @@
 &trans  &kp Z   &kp X   &kp C   &kp V   &kp B   &kp K   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans    &trans
             >;
+
+            label = "CMK";
         };
 
         layer_3 {
@@ -170,7 +174,7 @@
             label = "Raise";
         };
 
-        sys {
+        k-sys {
             bindings = <
                                                                         &trans  &trans  &trans
 &trans  &to 1   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0   &trans
@@ -180,7 +184,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "sys";
+            label = "ksys";
         };
     };
 
