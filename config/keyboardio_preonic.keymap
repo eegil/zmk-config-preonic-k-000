@@ -6,8 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
 //#define PREONIC_ORTHO   1
 //#define PREONIC_MIT     1
@@ -17,32 +15,160 @@
 #define SYM_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+
 &lt { quick_tap_ms = <200>; };
 
 #define BT(n) BT_SEL n
 
 / {
-/*#if defined(PREONIC_ORTHO)
+    /*#if defined(PREONIC_ORTHO)
     chosen {
        zmk,matrix_transform = &ortho_transform;
     };
 #endif*/
-    
+
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             label = "Base";
             bindings = <
-		                                                                                                                        &kp X       &kp Y          &kp Z
- &kp ESC    &kp N1      &kp N2      &kp N3       &kp N4          &kp N5          &kp N6            &kp N7          &kp N8       &kp N9      &kp N0         &kp DEL  
- &kp TAB    &kp Q       &kp W       &kp E        &kp R           &kp T           &kp Y             &kp U           &kp I        &kp O       &kp P          &kp BACKSPACE
- &gresc     &kp A       &kp S       &kp D        &kp F           &kp G           &kp H             &kp J           &kp K        &kp L       &kp SEMI       &kp SINGLE_QUOTE
- &kp LSHFT  &kp Z       &kp X       &kp C        &kp V           &kp B           &kp N             &kp M           &kp COMMA    &kp DOT     &kp FSLH       &kp RET
- &kp LCTRL  &mo SYM_L   &kp LGUI    &kp LALT     &mo NAV_L             &kp SPACE                   &mo NUM_L       &kp LEFT     &kp UP      &kp DOWN       &kp RIGHT
-
+                                                                                            &kp X    &mo 10    &kp K_MUTE
+&gresc         &kp N1     &kp N2    &kp N3    &kp N4  &kp N5     &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&lt 7 TAB      &kp Q      &kp W     &kp E     &kp R   &kp T      &kp Y   &kp U   &kp I      &kp O    &kp P     &kp EQUAL
+&kp BACKSPACE  &kp A      &kp S     &kp D     &kp F   &kp G      &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&sk LSHFT      &kp Z      &kp X     &kp C     &kp V   &kp B      &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT RET
+&kp LCTRL      &mo SYM_L  &kp LGUI  &kp LALT  &mo 8   &kp SPACE          &mo 9   &kp LEFT   &kp UP   &kp DOWN  &kp RIGHT
             >;
+
+            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+        };
+
+        CMK-DH {
+            bindings = <
+                                                                        &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &kp F   &kp P   &kp B   &kp J   &kp L   &kp U   &kp Y   &kp SEMI  &trans
+&trans  &trans  &kp R   &kp S   &kp T   &kp G   &kp M   &kp N   &kp E   &kp I   &kp O     &trans
+&trans  &trans  &trans  &trans  &kp D   &kp V   &kp K   &kp H   &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans
+            >;
+        };
+
+        CMK {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        xtra {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "xtra";
+        };
+
+        lower {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Lower";
+        };
+
+        raise {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Raise";
+        };
+
+        sys {
+            bindings = <
+                                                                        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "sys";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        sys {
+            if-layers = <7 8>;
+            then-layer = <10>;
         };
     };
 };
-
