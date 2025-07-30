@@ -26,18 +26,33 @@
        zmk,matrix_transform = &ortho_transform;
     };
 #endif*/
-
- /*   sensors: sensors {
+    /*   sensors: sensors {
         compatible = "zmk,keymap-sensors";
         //sensors = <&right_encoder>;
         triggers-per-rotation = <20>;
     };*/
 
+    combos {
+        compatible = "zmk,combos";
+
+        rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <23 22>;
+            layers = <1 0 2>;
+        };
+
+        lpar {
+            bindings = <&kp LPAR>;
+            key-positions = <18 19>;
+            layers = <0 2 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
-            label = "Base";
+        qwerty {
+            label = "qwerty";
             bindings = <
                                                                                                    &kp X    &mo 10    &kp K_MUTE
 &gresc         &kp N1     &kp N2    &kp N3    &kp N4  &kp N5     &kp N6         &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
@@ -63,12 +78,12 @@
 
         CMK {
             bindings = <
-                                                                        &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                                           &trans   &trans    &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&trans  &kp Q   &kp W   &kp F   &kp P   &kp G   &kp J   &kp L   &kp U      &kp Y    &kp SEMI  &kp BSLH
+&trans  &kp A   &kp R   &kp S   &kp T   &kp D   &kp H   &kp N   &kp E      &kp I    &kp O     &kp APOS
+&trans  &kp Z   &kp X   &kp C   &kp V   &kp B   &kp K   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans    &trans
             >;
         };
 
