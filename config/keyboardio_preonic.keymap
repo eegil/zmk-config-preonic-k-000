@@ -33,12 +33,12 @@
         base_layer {
             label = "Base";
             bindings = <
-                                                                                            &kp X    &mo 10    &kp K_MUTE
-&gresc         &kp N1     &kp N2    &kp N3    &kp N4  &kp N5     &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&lt 7 TAB      &kp Q      &kp W     &kp E     &kp R   &kp T      &kp Y   &kp U   &kp I      &kp O    &kp P     &kp EQUAL
-&kp BACKSPACE  &kp A      &kp S     &kp D     &kp F   &kp G      &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&sk LSHFT      &kp Z      &kp X     &kp C     &kp V   &kp B      &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT RET
-&kp LCTRL      &mo SYM_L  &kp LGUI  &kp LALT  &mo 8   &kp SPACE  &kp SPACE   &mo 9   &kp LEFT   &kp UP   &kp DOWN  &kp RIGHT
+                                                                                                   &kp X    &mo 10    &kp K_MUTE
+&gresc         &kp N1     &kp N2    &kp N3    &kp N4  &kp N5     &kp N6         &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&lt 7 TAB      &kp Q      &kp W     &kp E     &kp R   &kp T      &kp Y          &kp U   &kp I      &kp O    &kp P     &kp EQUAL
+&kp BACKSPACE  &kp A      &kp S     &kp D     &kp F   &kp G      &kp H          &kp J   &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&sk LSHFT      &kp Z      &kp X     &kp C     &kp V   &kp B      &kp N          &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT RET
+&kp LCTRL      &mo SYM_L  &kp LGUI  &kp LALT  &mo 8   &kp SPACE  &kp BACKSPACE  &mo 9   &kp LEFT   &kp UP   &kp DOWN  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
@@ -152,7 +152,7 @@
         sys {
             bindings = <
                                                                         &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &to 1   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
