@@ -22,12 +22,6 @@
 #define BT(n) BT_SEL n
 
 / {
-/*#if defined(PREONIC_ORTHO)
-    chosen {
-       zmk,matrix_transform = &ortho_transform;
-    };
-#endif*/
-    
     keymap {
         compatible = "zmk,keymap";
 
