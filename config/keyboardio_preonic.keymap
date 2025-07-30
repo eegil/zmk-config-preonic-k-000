@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define PREONIC_ORTHO   1
-// #define PREONIC_MIT     1
+//#define PREONIC_MIT     1
 
 #define NAV_L 1
 #define NUM_L 2
