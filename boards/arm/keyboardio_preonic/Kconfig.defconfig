@@ -34,7 +34,5 @@ config I2C
 config ZMK_MAX17048
 	default y
 
-config ZMK_STUDIO
-	default y 
 
 endif # BOARD_KEYBOARDIO_PREONIC
