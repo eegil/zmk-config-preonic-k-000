@@ -7,6 +7,8 @@
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.d>
+#include <layouts/common/ortho_5x12/position_map.dtsi>
 
 / {
 	model = "preonic";
